@@ -7,4 +7,4 @@
     state: present
     reload: yes
   loop: "{{ nfs_kernel_tuning | dict2items }}"
-  when: when: (nfs_kernel_tuning is defined)
+  when: when: (kernel_tuning | bool) and (nfs_kernel_tuning is defined)
