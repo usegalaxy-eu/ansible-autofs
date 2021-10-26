@@ -1,2 +1,2 @@
 # ansible-autofs
-Installation and configuration of Autofs
+Autofs installation and configuration

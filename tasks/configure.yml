@@ -28,7 +28,7 @@
     name: autofs
     enabled: yes
     state: started
-  when: when: (autofs_mount_points is defined) and (autofs_mount_points|length > 0)
+  when: (autofs_mount_points is defined) and (autofs_mount_points|length > 0)
 
 - name: Flush handlers to ensure mounts are available
   meta: flush_handlers
