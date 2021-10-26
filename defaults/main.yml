@@ -19,4 +19,4 @@ autofs_conf_files:
 # needed by a NetApp device, see: https://docs.microsoft.com/en-us/azure/azure-netapp-files/performance-linux-concurrency-session-slots
 nfs_kernel_tuning: False
 nfs_kernel_tuning_parameters:
-  tcp_max_slot_table_entries: 128
+  sunrpc.tcp_max_slot_table_entries: 128
