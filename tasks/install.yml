@@ -3,4 +3,4 @@
   ansible.builtin.package:
     name: autofs
     state: latest
-  when: (autofs_mount_points is defined) and (autofs_mount_points|length > 0)
+  when: autofs_install

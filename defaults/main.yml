@@ -1,3 +1,5 @@
+autofs_install: True
+
 # Autofs mount points labels. They can be:
 # - data
 # - discontinued

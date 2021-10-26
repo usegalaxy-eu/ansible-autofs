@@ -1,9 +1,9 @@
 - name: autofs restart
-  service:
+  ansible.builtin.service:
     name: autofs
     state: restarted
 
 - name: autofs reload
-  service:
+  ansible.builtin.service:
     name: autofs
     state: reload
