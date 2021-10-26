@@ -1,4 +1,7 @@
-autofs_install: True
+autofs_service:
+  install: True
+  enable: True
+
 
 # Autofs mount points labels. They can be:
 # - data
