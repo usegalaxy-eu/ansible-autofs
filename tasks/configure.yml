@@ -15,7 +15,7 @@
     dest: "'{{ item.dest }}"
     owner: root
     group: root
-    mode 0644
+    mode: 0644
   loop:
     - { label: 'data', src: 'data.conf.j2', dest: '/etc/auto.data'}
     - { label: 'usrlocal', src: 'usrlocal.conf.j2', dest: '/etc/auto.usrlocal'}    
