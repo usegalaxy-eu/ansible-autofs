@@ -6,5 +6,5 @@
     sysctl_set: yes
     state: present
     reload: yes
-  loop: "{{ nfs_kernel_tuning | dict2items }}"
-  when: (kernel_tuning | bool) and (nfs_kernel_tuning is defined)
+  loop: "{{ nfs_kernel_tuning_parameters | dict2items }}"
+  when: (nfs_kernel_tuning | bool) and (nfs_kernel_tuning_parameters is defined)
