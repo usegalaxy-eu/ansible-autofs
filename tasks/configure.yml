@@ -28,4 +28,4 @@
     name: autofs
     enabled: yes
     state: started
-  when: (autofs_service.install | bool) and (autofs.service.enable | bool)
+  when: (autofs_service.install | bool) and (autofs_service.enable | bool)
