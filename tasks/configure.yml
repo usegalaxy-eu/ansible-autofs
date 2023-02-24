@@ -1,6 +1,6 @@
 ---
 - name: Copy main autofs file
-  tags: postboot
+  tags: postboot postboot-autofs
   ansible.builtin.template:
     src: data.autofs.j2
     dest: "/etc/auto.master.d/data.autofs"
@@ -11,7 +11,7 @@
   when: (autofs_mount_points is defined) and (autofs_mount_points|length > 0)
 
 - name: Copy mount point configuration file
-  tags: postboot
+  tags: postboot postboot-autofs
   ansible.builtin.template:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
@@ -27,7 +27,7 @@
   notify: autofs restart
 
 - name: autofs service enable
-  tags: postboot
+  tags: postboot postboot-autofs
   ansible.builtin.service:
     name: autofs
     enabled: yes
