@@ -1,4 +1,7 @@
 ---
-- include: "kernel_tuning.yml"
-- include: "install.yml"
-- include: "configure.yml"
+- name: Include kernel tuning tasks
+  ansible.builtin.include_tasks: "kernel_tuning.yml"
+- name: Include installation tasks
+  ansible.builtin.include_tasks: "install.yml"
+- name: Include configuration tasks
+  ansible.builtin.include_tasks: "configure.yml"
