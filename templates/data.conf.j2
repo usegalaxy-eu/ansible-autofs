@@ -25,3 +25,17 @@
 {{ row }}
 {% endfor %}
 {% endif %}
+
+# Cache volumes
+{% if "cache" in autofs_mount_points %}
+{% for row in autofs_conf_files.cache %}
+{{ row }}
+{% endfor %}
+{% endif %}
+
+# Misc volumes
+{% if "misc" in autofs_mount_points %}
+{% for row in autofs_conf_files.misc %}
+{{ row }}
+{% endfor %}
+{% endif %}
