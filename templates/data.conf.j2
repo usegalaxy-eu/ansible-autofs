@@ -33,6 +33,13 @@
 {% endfor %}
 {% endif %}
 
+# CVMFS alien cache volumes
+{% if "cvac" in autofs_mount_points %}
+{% for row in autofs_conf_files.cvac %}
+{{ row }}
+{% endfor %}
+{% endif %}
+
 # Misc volumes
 {% if "misc" in autofs_mount_points %}
 {% for row in autofs_conf_files.misc %}
