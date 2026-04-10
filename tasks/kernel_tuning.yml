@@ -1,4 +1,10 @@
 ---
+- name: Ensure sunrpc module is loaded
+  community.general.modprobe:
+    name: sunrpc
+    state: present
+  when: nfs_kernel_tuning | bool
+
 # Set ip forwarding on in /proc and in the sysctl file and reload if necessary
 - ansible.posix.sysctl:
     name: "{{ item.key }}"
