@@ -2,5 +2,5 @@
 - name: autofs package install
   ansible.builtin.package:
     name: autofs
-    state: latest
+    state: present
   when: autofs_service.install | bool
